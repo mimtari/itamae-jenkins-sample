@@ -1,0 +1,21 @@
+{
+  "selinux": {
+    "enabled": true,
+    "status": "permissive"
+  },
+  "firewall": {
+    "public": {
+      "services": ["http", "https", "ssh", "jenkins"]
+    }
+  },
+  "jenkins": {
+    "master": {
+      "url": "192.168.33.10",
+      "prefix": "/jenkins"
+    }
+  },
+  "recipes": [
+    "./roles/common.rb",
+    "./roles/jenkins-master.rb"
+  ]
+}

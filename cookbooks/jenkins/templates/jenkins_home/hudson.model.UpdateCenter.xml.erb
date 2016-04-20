@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sites>
+  <site>
+    <id>default</id>
+<%- if node[:jenkins][:master][:update_stable] -%>
+    <url>https://updates.jenkins-ci.org/stable/update-center.json</url>
+<%- else -%>
+    <url>https://updates.jenkins-ci.org/update-center.json</url>
+<%- end -%>
+  </site>
+</sites>

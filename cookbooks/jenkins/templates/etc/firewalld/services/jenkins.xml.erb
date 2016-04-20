@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Jenkins</short>
+  <description>Jenkins Continuous Integration Server</description>
+  <port protocol="tcp" port="<%= node[:jenkins][:master][:port] %>"/>
+</service>

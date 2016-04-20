@@ -1,0 +1,15 @@
+JENKINS_AJP_PORT="-1"
+JENKINS_JAVA_OPTIONS="-Djava.awt.headless=true"
+JENKINS_HOME="<%= node[:jenkins][:master][:home] %>"
+<%- if node[:jenkins][:master][:port] -%>
+JENKINS_PORT="<%= node[:jenkins][:master][:port] %>"
+<%- end -%>
+<%- if node[:jenkins][:master][:prefix] -%>
+JENKINS_ARGS="--prefix=<%= node[:jenkins][:master][:prefix] %>"
+<%- end -%>
+<%- if node[:jenkins][:master][:user] -%>
+JENKINS_USER=<%= node['jenkins']['master']['user'] %>
+<%- end -%>
+<%- if node[:jenkins][:master][:group] -%>
+JENKINS_GROUP=<%= node['jenkins']['master']['group'] %>
+<%- end -%>
